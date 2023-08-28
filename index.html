@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone</title>
+    <!-- Daisy+Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h2 class="text-6xl text-center font-semibold text-rose-500 mb-16">Hunting Phone</h2>
+
+    </header>
+
+    <main>
+        <!-- Search -->
+        <section  class=" container mx-auto mb-7 p-5 rounded bg-rose-200">
+            <input id="search-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handelSearch()" class="btn bg-rose-300 text-white  btn-secondary border-none">Secondary</button>
+        </section>
+
+
+
+        <!-- Phones -->
+     <section class="container mx-auto">
+        <!-- Spinner -->
+        <div id="loading-spinner" class="text-center py-40 hidden">
+            <span class="loading loading-dots loading-lg"></span>
+        </div>
+     <div id="phone-container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+     </div>
+    
+    <!-- Show all phone button -->
+    <div id="show-all-container" class="hidden text-center">
+        <button onclick="handelShowAll()" class="btn border-none btn-primary  bg-rose-300 text-white">Show all</button>
+    </div>
+
+   
+
+</section>
+
+
+
+ <!-- Single phone details -->
+ <section class="container mx-auto">
+
+
+    <!-- Open the modal using ID.showModal() method -->
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <h3 id="show-detail-phone-name" class="font-bold text-lg"></h3>
+    <div id="show-detail-container">
+
+    </div>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+ </section>
+
+
+
+</main>
+    
+
+    <footer>
+
+    </footer>
+
+    <!-- JS  -->
+    <script src="JS/Phone.js"></script>
+
+</body>
+</html>
